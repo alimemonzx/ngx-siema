@@ -85,7 +85,7 @@ export class NgxSiemaComponent implements AfterViewInit, OnInit, OnDestroy {
         numbers: number,
         listener: BehaviorSubject<{ selector: string, currentSlide: number }>,
       }) => {
-        if (this.compareSelectors(data.selector)) {
+        if (this.compareSelectors(data.selector) && this.instance) {
           this.instance.next(data.numbers, () => {
             this.next.emit({
               selector: this.options.selector,
@@ -102,7 +102,7 @@ export class NgxSiemaComponent implements AfterViewInit, OnInit, OnDestroy {
         numbers: number,
         listener: BehaviorSubject<{ selector: string, currentSlide: number }>,
       }) => {
-        if (this.compareSelectors(data.selector)) {
+        if (this.compareSelectors(data.selector) && this.instance) {
           this.instance.prev(data.numbers, () => {
             this.prev.emit({
               selector: this.options.selector,
@@ -119,7 +119,7 @@ export class NgxSiemaComponent implements AfterViewInit, OnInit, OnDestroy {
         index: number,
         listener: BehaviorSubject<{ selector: string, currentSlide: number }>,
       }) => {
-        if (this.compareSelectors(data.selector)) {
+        if (this.compareSelectors(data.selector) && this.instance) {
           this.instance.goTo(data.index, () => {
             this.goTo.emit({
               selector: this.options.selector,
@@ -136,7 +136,7 @@ export class NgxSiemaComponent implements AfterViewInit, OnInit, OnDestroy {
         index: number,
         listener: BehaviorSubject<{ selector: string, currentSlide: number }>,
       }) => {
-        if (this.compareSelectors(data.selector)) {
+        if (this.compareSelectors(data.selector) && this.instance) {
           this.instance.remove(data.index, () => {
             this.remove.emit({
               selector: this.options.selector,
@@ -154,7 +154,7 @@ export class NgxSiemaComponent implements AfterViewInit, OnInit, OnDestroy {
         index: number,
         listener: BehaviorSubject<{ selector: string, currentSlide: number }>,
       }) => {
-        if (this.compareSelectors(data.selector)) {
+        if (this.compareSelectors(data.selector) && this.instance) {
           this.instance.insert(data.item, data.index, () => {
             this.insert.emit({
               selector: this.options.selector,
@@ -171,7 +171,7 @@ export class NgxSiemaComponent implements AfterViewInit, OnInit, OnDestroy {
         item: any,
         listener: BehaviorSubject<{ selector: string, currentSlide: number }>,
       }) => {
-        if (this.compareSelectors(data.selector)) {
+        if (this.compareSelectors(data.selector) && this.instance) {
           this.instance.prepend(data.item, () => {
             this.prepend.emit({
               selector: this.options.selector,
@@ -188,7 +188,7 @@ export class NgxSiemaComponent implements AfterViewInit, OnInit, OnDestroy {
         item: any,
         listener: BehaviorSubject<{ selector: string, currentSlide: number }>,
       }) => {
-        if (this.compareSelectors(data.selector)) {
+        if (this.compareSelectors(data.selector) && this.instance) {
           this.instance.append(data.item, () => {
             this.append.emit({
               selector: this.options.selector,
@@ -205,7 +205,7 @@ export class NgxSiemaComponent implements AfterViewInit, OnInit, OnDestroy {
         restoreMarkup: boolean,
         listener: BehaviorSubject<{ selector: string }>,
       }) => {
-        if (this.compareSelectors(data.selector)) {
+        if (this.compareSelectors(data.selector) && this.instance) {
           this.instance.destroy(data.restoreMarkup, () => {
             this.destroy.emit({
               selector: this.options.selector,
@@ -220,7 +220,7 @@ export class NgxSiemaComponent implements AfterViewInit, OnInit, OnDestroy {
         selector: string,
         listener: BehaviorSubject<{ selector: string, currentSlide: number }>,
       }) => {
-        if (this.compareSelectors(data.selector)) {
+        if (this.compareSelectors(data.selector) && this.instance) {
           this.currentSlide.emit({
             selector: this.options.selector,
             currentSlide: this.instance.currentSlide,
