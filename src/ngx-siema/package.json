@@ -1,6 +1,6 @@
 {
   "name": "ngx-siema",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Lightweight and simple carousel with no dependencies.",
   "main": "bundles/ngx-siema.umd.js",
   "module": "index.js",
