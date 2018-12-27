@@ -1,7 +1,6 @@
 [![Build Status](https://travis-ci.org/lexzhukov/ngx-siema.svg?branch=master)](https://travis-ci.org/lexzhukov/ngx-siema)
 
 # ngx-siema
-===========================
 
 **THIS REPOSITORY IS NO LONGER IN USE.**
 
