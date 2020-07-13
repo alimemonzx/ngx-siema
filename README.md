@@ -2,7 +2,7 @@
 
 # ngx-siema
 
-**THIS REPOSITORY IS NO LONGER IN USE.**
+**THIS IS THE UPDTAED VERSION OF ngx-siema WITH LATEST SIEMA 1.5.1**
 
 [Siema](https://pawelgrzybek.com/siema/) - Lightweight and simple carousel with no dependencies.
 
@@ -15,46 +15,43 @@
 Include NgxSiemaModule in your main module:
 
 ```javascript
-import { NgxSiemaModule } from 'ngx-siema';
+import { NgxSiemaModule } from "ngx-siema";
 
 @NgModule({
   // ...
-  imports:      [
-    NgxSiemaModule.forRoot(),
-  ],
+  imports: [NgxSiemaModule.forRoot()],
   // ...
 })
-export class AppModule { }
+export class AppModule {}
 ```
 
 Then use in your component:
 
 ```javascript
-import { Component } from '@angular/core';
-import { NgxSiemaOptions } from 'ngx-siema';
+import { Component } from "@angular/core";
+import { NgxSiemaOptions } from "ngx-siema";
 
 @Component({
-  selector: 'sample',
+  selector: "sample",
   template: `
     <ngx-siema [options]="options">
       <ngx-siema-slide>
-        <img src="assets/siema--pink.svg">
+        <img src="assets/siema--pink.svg" />
       </ngx-siema-slide>
       <ngx-siema-slide>
-        <img src="assets/siema--yellow.svg">
+        <img src="assets/siema--yellow.svg" />
       </ngx-siema-slide>
       <ngx-siema-slide>
-        <img src="assets/siema--pink.svg">
+        <img src="assets/siema--pink.svg" />
       </ngx-siema-slide>
     </ngx-siema>
   `,
 })
 export class SampleComponent implements OnInit {
-
   options: NgxSiemaOptions = {
-    selector: '.siema',
+    selector: ".siema",
     duration: 200,
-    easing: 'ease-out',
+    easing: "ease-out",
     perPage: 1,
     startIndex: 0,
     draggable: true,
@@ -175,4 +172,5 @@ export class SampleComponent {
 ```
 
 ## License
+
 [MIT](LICENSE) license.
